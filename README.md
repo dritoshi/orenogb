@@ -31,6 +31,13 @@ Visualization command for genomic data
     R> biocLite(c("ggbio", "GenomicRanges")
     R> biocLite(c("Mus.musculus", "BSgenome.Mmusculus.UCSC.mm10"))
 
+## ToDo
+- import bam and bw data
+- choose species
+- semantic zoom
+- wapper by shell script
+- unit test
+
 ## Contribution
 
 ## Licence
