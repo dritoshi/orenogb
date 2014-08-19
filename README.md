@@ -10,7 +10,7 @@ Visualization command for genomic data
 
     $ R -q -f orenogb.R --args chr2 102500000 103000000 output.pdf
 
-![demo](demo.jpg)
+![demo](demo.png)
 
 ## Requirement
 - R
