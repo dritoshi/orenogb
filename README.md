@@ -15,11 +15,11 @@ Visualization command for genomic data
 ## Requirement
 - R
 - Bioconductor Software Packages
--- ggbio
--- GenomicRanges
+    - ggbio
+    - GenomicRanges
 - Bioconductor Annotation Packages
--- Mus.musculus
--- BSgenome.Mmusculus.UCSC.mm10
+    - Mus.musculus
+    - BSgenome.Mmusculus.UCSC.mm10
 
 ## Usage
 
