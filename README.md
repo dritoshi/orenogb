@@ -22,7 +22,8 @@ Visualization command for genomic data
 -- BSgenome.Mmusculus.UCSC.mm10
 
 ## Usage
-$ R -q -f orenogb.R --args [chr] [start bp] [end bp] [output file]
+
+    $ R -q -f orenogb.R --args [chr] [start bp] [end bp] [output file]
 
 ## Install
 
