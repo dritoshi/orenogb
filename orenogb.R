@@ -20,7 +20,7 @@ zoom.power  <- eval(parse(text = args[4]))
 output.file <- args[5]
 
 cat(paste0(chr, ":", start.bp, "-", end.bp), "\n")
-#cat("Zoom:",   zoom.power,  "\n")
+cat("Zoom:",   zoom.power,  "\n")
 cat("Output:", output.file, "\n")
 
 # make a GenomicRanges object
