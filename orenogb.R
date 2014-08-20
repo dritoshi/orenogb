@@ -3,9 +3,9 @@
 #
 library("ggbio")
 library("GenomicRanges")
-library("ShortRead")
 library("GenomicAlignments")
-library("parallel")
+# library("ShortRead")
+# library("parallel")
 
 library("Mus.musculus")
 library("BSgenome.Mmusculus.UCSC.mm10")
