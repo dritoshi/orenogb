@@ -8,19 +8,19 @@ Visualization command for genomic data
 
 ## Demo
 
-    $ R --slave --vanilla -f orenogb.R --args chr17 35400000 35600000 1 ~/Sources/Quartz_01.th.rmrRNA.bam demo.pdf
+    $ R --slave --vanilla -f orenogb.R --args chr17 35400000 35600000 1 Quartz_01.th.rmrRNA.bam,Quartz_02.th.rmrRNA.bam demo.pdf
 
 ![demo](demo.png)
 
 ### Exponential notation
 
-    $ R --slave --vanilla -f orenogb.R --args chr17 3.55e7+2880 3.55e7+16079 1 ~/Sources/Quartz_01.th.rmrRNA.bam demo2.pdf
+    $ R --slave --vanilla -f orenogb.R --args chr17 3.55e7+2880 3.55e7+16079 1 Quartz_01.th.rmrRNA.bam,Quartz_02.th.rmrRNA.bam demo2.pdf
 
 ![demo](demo2.png)
 
 ### Semantic Zoom
 
-    $ R --slave --vanilla -f orenogb.R --args chr17 35502880 35516079 1/200 ~/Sources/Quartz_01.th.rmrRNA.bam demo3.pdf
+    $ R --slave --vanilla -f orenogb.R --args chr17 35502880 35516079 1/200 Quartz_01.th.rmrRNA.bam,Quartz_02.th.rmrRNA.bam demo3.pdf
 
 ![demo](demo3.png)
 
@@ -47,7 +47,6 @@ Visualization command for genomic data
     R> biocLite(c("Mus.musculus", "BSgenome.Mmusculus.UCSC.mm10"))
 
 ## ToDo
-- load multiple data files
 - choose species
 - wapper by shell script
 - unit test
