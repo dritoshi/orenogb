@@ -56,7 +56,7 @@ Visualization command for genomic data
 
 ## Licence
 
-[MIT](https://github.com/dritoshi/tool/blob/master/LICENCE)
+[MIT](https://github.com/dritoshi/orenogb/blob/master/LICENCE)
 
 ## Author
 
