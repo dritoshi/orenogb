@@ -8,19 +8,19 @@ Visualization command for genomic data
 
 ## Demo
 
-    $ R -q -f orenogb.R --args chr2 102500000 103000000 1 demo.pdf
+    $ R --slave --vanilla -f orenogb.R --args chr2 102500000 103000000 1 demo.pdf
 
 ![demo](demo.png)
 
 ### Exponential notation
 
-    $ R -q -f orenogb.R --args chr2 1e8+2748000 1e8+2749000 1 demo2.pdf
+    $ R --slave --vanilla-f orenogb.R --args chr2 1e8+2748000 1e8+2749000 1 demo2.pdf
 
 ![demo](demo2.png)
 
 ### Semantic Zoom
 
-    $ R -q -f orenogb.R --args chr2 1e8+2748000 1e8+2749000 1/100 demo3.pdf
+    $ R --slave --vanilla -f orenogb.R --args chr2 1e8+2748000 1e8+2749000 1/100 demo3.pdf
 
 ![demo](demo3.png)
 
@@ -35,7 +35,7 @@ Visualization command for genomic data
 
 ## Usage
 
-    $ R -q -f orenogb.R --args [chr] [start bp] [end bp] [zoom] [output file]
+    $ R --slave --vanilla -f orenogb.R --args [chr] [start bp] [end bp] [zoom] [output file]
 
 ## Install
 
