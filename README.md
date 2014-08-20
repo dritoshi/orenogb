@@ -8,9 +8,19 @@ Visualization command for genomic data
 
 ## Demo
 
-    $ R -q -f orenogb.R --args chr2 102500000 103000000 output.pdf
+    $ R -q -f orenogb.R --args chr2 102500000 103000000 1 demo.pdf
 
+### Exponential notation
 ![demo](demo.png)
+
+    $ R -q -f orenogb.R --args chr2 1e8+2748000 1e8+2749000 1 demo2.pdf
+
+### Semantic Zoom
+![demo](demo2.png)
+
+    $ R -q -f orenogb.R --args chr2 1e8+2748000 1e8+2749000 1/100 demo3.pdf
+
+![demo](demo3.png)
 
 ## Requirement
 - R
@@ -23,7 +33,7 @@ Visualization command for genomic data
 
 ## Usage
 
-    $ R -q -f orenogb.R --args [chr] [start bp] [end bp] [output file]
+    $ R -q -f orenogb.R --args [chr] [start bp] [end bp] [zoom] [output file]
 
 ## Install
 
@@ -34,7 +44,6 @@ Visualization command for genomic data
 ## ToDo
 - import bam and bw data
 - choose species
-- semantic zoom
 - wapper by shell script
 - unit test
 
