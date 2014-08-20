@@ -47,6 +47,7 @@ Visualization command for genomic data
     R> biocLite(c("Mus.musculus", "BSgenome.Mmusculus.UCSC.mm10"))
 
 ## ToDo
+- load multiple data files
 - choose species
 - wapper by shell script
 - unit test
