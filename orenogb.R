@@ -44,11 +44,13 @@ if ( is.na(args[1]) ) {
   zoom.power  <- eval(parse(text = args[4]))
   bam.files   <- args[5]
   output.file <- args[6]
-}  
+}
+
+bam.files  <- unlist(strsplit(bam.files, ","))
 
 cat(paste0(chr, ":", start.bp, "-", end.bp), "\n")
 cat("Zoom:",   zoom.power,  "\n")
-cat("bam files:", bam.files, "\n")
+cat( paste(c("bam files:", bam.files), "\n") )
 cat("Output:", output.file, "\n")
 
 # make a GenomicRanges object
@@ -65,8 +67,6 @@ bg   <- BSgenome.Mmusculus.UCSC.mm10
 p.bg <- autoplot(bg, which = range)
 
 # bam
-bam.files  <- unlist(strsplit(bam.files, ","))
-cat("bam files:", bam.files, "\n")
 bam.views  <- BamViews(bam.files, bamRanges = range)
 bam.galign <- readGAlignmentsFromBam(bam.views)
 

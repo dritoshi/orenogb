@@ -4,7 +4,10 @@ Orenogb
 Visualization command for genomic data
 
 ## Description
-
+- just type simple command on your terminal
+- beautiful visualization by ggbio and ggplot2
+- semantic zoom
+- eaily loacing of transcriptome annotation
 
 ## Demo
 
@@ -50,6 +53,7 @@ Visualization command for genomic data
 - choose species
 - wapper by shell script
 - unit test
+- retrive by genename
 
 ## Contribution
 
