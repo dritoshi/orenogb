@@ -55,6 +55,7 @@ Visualization command for genomic data
 - wapper by shell script
 - unit test
 - retrive by genename
+- deamonaize R script
 
 ## Contribution
 
