@@ -32,6 +32,7 @@ Visualization command for genomic data
 - Bioconductor Software Packages
     - ggbio
     - GenomicRanges
+    - GenomicAlignments
 - Bioconductor Annotation Packages
     - Mus.musculus
     - BSgenome.Mmusculus.UCSC.mm10
@@ -46,7 +47,7 @@ Visualization command for genomic data
     $ cd orenogb
     $ sudo R
     R> source("http://bioconductor.org/biocLite.R")
-    R> biocLite(c("ggbio", "GenomicRanges")
+    R> biocLite(c("ggbio", "GenomicRanges", "GenomicAlignments")
     R> biocLite(c("Mus.musculus", "BSgenome.Mmusculus.UCSC.mm10"))
 
 ## ToDo
