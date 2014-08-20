@@ -38,7 +38,7 @@ Visualization command for genomic data
 
 ## Usage
 
-    $ R --slave --vanilla -f orenogb.R --args [chr] [start bp] [end bp] [zoom] [bam] [output file]
+    $ R --slave --vanilla -f orenogb.R --args [chr] [start bp] [end bp] [zoom] [bam1,bam2,...] [output file]
 
 ## Install
 
