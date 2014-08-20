@@ -39,6 +39,9 @@ Visualization command for genomic data
 
 ## Install
 
+    $ git clone git@github.com:dritoshi/orenogb.git
+    $ cd orenogb
+    $ sudo R
     R> source("http://bioconductor.org/biocLite.R")
     R> biocLite(c("ggbio", "GenomicRanges")
     R> biocLite(c("Mus.musculus", "BSgenome.Mmusculus.UCSC.mm10"))
