@@ -7,7 +7,8 @@ Visualization command for genomic data
 - just type simple command on your terminal
 - beautiful visualization by ggbio and ggplot2
 - semantic zoom
-- eaily loacing of transcriptome annotation
+- eaily loading of transcriptome annotation
+- search by gene Symbol
 
 ## Demo
 
