@@ -11,21 +11,27 @@ Visualization command for genomic data
 
 ## Demo
 
-    $ R --slave --vanilla -f orenogb.R --args chr17 35400000 35600000 1 Quartz_01.th.rmrRNA.bam,Quartz_02.th.rmrRNA.bam demo/demo.pdf
+    $ R --slave --vanilla -f orenogb.R --args coordination chr17 35400000 35600000 1 Quartz_01.th.rmrRNA.bam,Quartz_02.th.rmrRNA.bam demo/demo.pdf
 
 ![demo](demo/demo.png)
 
 ### Exponential notation
 
-    $ R --slave --vanilla -f orenogb.R --args chr17 3.55e7+2880 3.55e7+16079 1 Quartz_01.th.rmrRNA.bam,Quartz_02.th.rmrRNA.bam demo/demo2.pdf
+    $ R --slave --vanilla -f orenogb.R --args coordination chr17 3.55e7+2880 3.55e7+16079 1 Quartz_01.th.rmrRNA.bam,Quartz_02.th.rmrRNA.bam demo/demo2.pdf
 
 ![demo](demo/demo2.png)
 
 ### Semantic Zoom
 
-    $ R --slave --vanilla -f orenogb.R --args chr17 35502880 35516079 1/200 Quartz_01.th.rmrRNA.bam,Quartz_02.th.rmrRNA.bam demo/demo3.pdf
+    $ R --slave --vanilla -f orenogb.R --args coordination chr17 35502880 35516079 1/200 Quartz_01.th.rmrRNA.bam,Quartz_02.th.rmrRNA.bam demo/demo3.pdf
 
-![demo](demo/demo3.png)
+![demo](demo/demo3.png)    
+
+### Search by Gene Symbol
+
+    $ R --slave --vanilla -f orenogb.R --args gene Pou5f1 1 Quartz_01.th.rmrRNA.bam,Quartz_02.th.rmrRNA.bam demo/demo4.pdf
+
+![demo](demo/demo4.png)
 
 ## Requirement
 - R
@@ -39,7 +45,7 @@ Visualization command for genomic data
 
 ## Usage
 
-    $ R --slave --vanilla -f orenogb.R --args [chr] [start bp] [end bp] [zoom] [bam1,bam2,...] [output file]
+    $ R --slave --vanilla -f orenogb.R --args [mode] [chr] [start bp] [end bp] [zoom] [bam1,bam2,...] [output file]
 
 ## Install
 
@@ -54,7 +60,6 @@ Visualization command for genomic data
 - choose species
 - wapper by shell script
 - unit test
-- retrive by genename
 - deamonaize R script
 
 ## Contribution
