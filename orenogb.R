@@ -2,10 +2,7 @@
 ## orenogb.R
 ##
 library("ggbio")
-library("GenomicRanges")
 library("GenomicAlignments")
-# library("ShortRead")
-# library("parallel")
 
 library("Mus.musculus")
 library("BSgenome.Mmusculus.UCSC.mm10")
@@ -20,7 +17,22 @@ getGRangesfromBam <- function(bamFile, wh, ...) {
     flag  = scanBamFlag(isUnmappedQuery = FALSE)
   )
   scanBam(bamFile, ..., param = param)[[1]]
-} 
+}
+getPositionBySymbol <- function(db, gene.name) {
+  library(db, character.only = TRUE)
+  # SYMBOL, CHR, TXSTART, TXEND
+  cls <- columns(eval(parse(text = db)))[c(18, 11, 49, 50)]
+  kt  <- keytypes(eval(parse(text = db)))[18]  # SYMBOL
+
+  res <- select(eval(parse(text = db)), keys = gene.name, columns = cls, keytype = kt)
+  res <- data.frame(
+    SYMBOL  = res$SYMBOL[1],
+    CHR     = paste0("chr", res$CHR[1]),
+    TXSTART = min(res$TXSTART),
+    TXEND   = max(res$TXEND)
+  )
+  return(res)
+}
 
 #
 # Input
@@ -29,7 +41,6 @@ args <- commandArgs(TRUE)
 
 if ( is.na(args[1]) ) {
 
-	rm(list = ls())
   search.mode <- "gene"
   # search.mode <- "coordination"
   chr         <- "chr17"
@@ -62,29 +73,24 @@ if ( is.na(args[1]) ) {
 bam.files  <- unlist(strsplit(bam.files, ","))
 
 if (search.mode == 'gene') {
-	library(biomaRt)
-
-  ensembl <- useMart(biomart = "ensembl", dataset = "mmusculus_gene_ensembl")
-  gene <- getBM(
-       attributes = c('chromosome_name', 'start_position', 'end_position'),
-       filters = 'mgi_symbol',
-       values  = gene.name,
-       mart    = ensembl
-  )
-  chr      <- paste0('chr', as.character(gene[,1]))
-  start.bp <- gene[,2]
-  end.bp   <- gene[,3]
+  db <- 'Mus.musculus'
+  gene <- getPositionBySymbol(db, gene.name)
+  chr      <- as.character(gene$CHR)
+  start.bp <- gene$TXSTART
+  end.bp   <- gene$TXEND
 }
 
-cat(paste0(chr, ":", start.bp, "-", end.bp), "\n")
-cat("Zoom:",   zoom.power,  "\n")
-cat( paste(c("bam files:", bam.files), "\n") )
-cat("Output:", output.file, "\n")
+# message
+cat("### Mode: ",      search.mode, "\n")
+cat("### Position: ",  paste0(chr, ":", start.bp, "-", end.bp), "\n")
+cat("### Zoom: ",      zoom.power,  "\n")
+cat("### bam files: ", bam.files,   "\n")
+cat("### Output: ",    output.file, "\n")
 
 #
 # Plot
 #
-
+cat("### Start plot...\n")
 # make a GenomicRanges object
 range <- GRanges(chr, IRanges(start.bp, end.bp))
 
@@ -122,4 +128,3 @@ tks <- tks + ggbio:::zoom(zoom.power)
 pdf(output.file)
 print(tks)
 dev.off()
-# }
