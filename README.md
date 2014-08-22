@@ -37,7 +37,7 @@ Visualization command for genomic data
 
 ### Human Genome
 
-    $ R --slave --vanilla -f orenogb.R --args gene hg19 POU5F1 1 Quartz_01.th.rmrRNA.bam,Quartz_02.th.rmrRNA.bam demo/demo4.pdf
+    $ R --slave --vanilla -f orenogb.R --args gene hg19 POU5F1 1 Smart-Seq2_01.bam,Smart-Seq2_02.bam demo/demo5.pdf
 
 ![demo](demo/demo5.png)
 

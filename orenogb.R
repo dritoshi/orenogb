@@ -147,13 +147,12 @@ tks <- tracks(
 )
 tks <- tks + xlim(range)
 tks <- tks + ggbio:::zoom(zoom.power)
-if (0) {
 for (i in seq_along(bam.files)) {
 	p.mis <- autoplot(bam.files[i], bsgenome = bg, which = range, stat = "mismatch")
   tks <- tks + tracks(p.mis, heights = 2)
-}  
-# tks <- tks + theme_tracks_sunset(bg = "#DFDFDF")
 }
+# tks <- tks + theme_tracks_sunset(bg = "#DFDFDF")
+
 # output
 pdf(output.file)
 print(tks)
