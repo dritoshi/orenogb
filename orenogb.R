@@ -61,7 +61,7 @@ if ( is.na(args[1]) ) {
   end.bp      <- 35516079
   zoom.power  <- 1
   output.file <- "demo.pdf"
-  bam.files   <- "~/Dropbox_RIKEN/Public_ACCCBiT/Data/Quartz-Seq/bam/Quartz_01.th.rmrRNA.bam,~/Dropbox_RIKEN/Public_ACCCBiT/Data/Quartz-Seq/bam/Quartz_02.th.rmrRNA.bam"
+  bam.files   <- "~/Dropbox_RIKEN/Public_ACCCBiT/Data/Quartz-Seq/bam/Quartz_01.bam,~/Dropbox_RIKEN/Public_ACCCBiT/Data/Quartz-Seq/bam/Quartz_02.bam"
   gene.name   <- "Pou5f1"
 
 } else {  

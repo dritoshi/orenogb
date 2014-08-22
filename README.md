@@ -13,25 +13,25 @@ Visualization command for genomic data
 
 ## Demo
 
-    $ R --slave --vanilla -f orenogb.R --args coordination mm10 chr17 35400000 35600000 1 Quartz_01.th.rmrRNA.bam,Quartz_02.th.rmrRNA.bam demo/demo.pdf
+    $ R --slave --vanilla -f orenogb.R --args coordination mm10 chr17 35400000 35600000 1 Quartz_01.bam,Quartz_02.bam demo/demo.pdf
 
 ![demo](demo/demo.png)
 
 ### Exponential notation
 
-    $ R --slave --vanilla -f orenogb.R --args coordination mm10 chr17 3.55e7+2880 3.55e7+16079 1 Quartz_01.th.rmrRNA.bam,Quartz_02.th.rmrRNA.bam demo/demo2.pdf
+    $ R --slave --vanilla -f orenogb.R --args coordination mm10 chr17 3.55e7+2880 3.55e7+16079 1 Quartz_01.bam,Quartz_02.bam demo/demo2.pdf
 
 ![demo](demo/demo2.png)
 
 ### Semantic Zoom
 
-    $ R --slave --vanilla -f orenogb.R --args coordination mm10 chr17 35502880 35516079 1/200 Quartz_01.th.rmrRNA.bam,Quartz_02.th.rmrRNA.bam demo/demo3.pdf
+    $ R --slave --vanilla -f orenogb.R --args coordination mm10 chr17 35502880 35516079 1/200 Quartz_01.bam,Quartz_02.bam demo/demo3.pdf
 
 ![demo](demo/demo3.png)    
 
 ### Search by Gene Symbol
 
-    $ R --slave --vanilla -f orenogb.R --args gene mm10 Pou5f1 1 Quartz_01.th.rmrRNA.bam,Quartz_02.th.rmrRNA.bam demo/demo4.pdf
+    $ R --slave --vanilla -f orenogb.R --args gene mm10 Pou5f1 1 Quartz_01.bam,Quartz_02.bam demo/demo4.pdf
 
 ![demo](demo/demo4.png)
 

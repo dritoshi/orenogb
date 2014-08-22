@@ -12,7 +12,7 @@ task :demo do
 
   # mm10
   bamdir    = '~/Dropbox_Riken/Public_ACCCBiT/Data/Quartz-Seq/bam'
-  bam_files = "#{bamdir}/Quartz_01.th.rmrRNA.bam,#{bamdir}/Quartz_02.th.rmrRNA.bam"
+  bam_files = "#{bamdir}/Quartz_01.bam,#{bamdir}/Quartz_02.bam"
 
   # hg19
   hg19_bamdir    = '~/Dropbox_Riken/Public_ACCCBiT/Data/Smart-Seq2/bam'
