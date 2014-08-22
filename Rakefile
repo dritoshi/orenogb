@@ -25,13 +25,13 @@ task :demo do
   #sh cmd
 
   cmd = "time #{base_cmd} coordination mm10 chr17 35502880 35516079 1/200 #{bam_files} demo/demo3.pdf"
-  #sh cmd
+  sh cmd
 
   cmd = "time #{base_cmd} gene mm10 Pou5f1 1 #{bam_files} demo/demo4.pdf"
   #sh cmd
 
   cmd = "time #{base_cmd} gene hg19 CDK2 1 #{hg19_bam_files} demo/demo5.pdf"
-  sh cmd    
+  #sh cmd    
 
   Dir.glob("demo/*.pdf") do |file|
   	png = "demo/" + File.basename(file, ".pdf") + ".png"

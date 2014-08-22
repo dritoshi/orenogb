@@ -145,13 +145,19 @@ tks <- tracks(
   gene     = p.txdb,  
   heights  = c(1, 1, 4)
 )
+for (i in seq_along(bam.files)) {
+  sample.name = sub('.bam', '', basename(bam.files[i]))
+	p.mis <- autoplot(bam.files[i], bsgenome = bg, which = range, stat = "mismatch")
+
+  sample.name <- sub('-', '', sample.name)
+  tracks.str <- paste0('tracks(', sample.name, ' = p.mis, heights = 2)')
+  cat('### ', tracks.str, "\n")
+  tks <- tks + eval(parse(text = tracks.str))
+  #tks <- tks + tracks(hoge = p.mis, heights = 2)
+ 
+}
 tks <- tks + xlim(range)
 tks <- tks + ggbio:::zoom(zoom.power)
-for (i in seq_along(bam.files)) {
-	p.mis <- autoplot(bam.files[i], bsgenome = bg, which = range, stat = "mismatch")
-  tks <- tks + tracks(p.mis, heights = 2)
-}
-# tks <- tks + theme_tracks_sunset(bg = "#DFDFDF")
 
 # output
 pdf(output.file)
